@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Somali Translator</title>
+    <style>
+        body {
+            font-family: 'Roboto Mono', Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        textarea, button {
+            margin: 10px;
+            padding: 10px;
+            width: 80%;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Somali Translator</h1>
+    <form method="POST">
+        <textarea name="text" rows="4" placeholder="Enter text in English..."></textarea><br>
+        <button type="submit">Translate</button>
+    </form>
+
+    <div class="button-container">
+        <button type="submit" form="language-form" name="flip" value="True">Flip Languages</button>
+    </div>
+
+    {% if translated_text %}
+    <div class="output">
+        <h2>Translated Text:</h2>
+        <p>{{ translated_text }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
