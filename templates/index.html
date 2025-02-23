@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Somali Translator</title>
@@ -8,6 +11,7 @@
         body {
             font-family: 'Roboto Mono', Arial, sans-serif;
             text-align: center;
+            background-color: whitesmoke;
             margin: 50px;
         }
 
@@ -16,14 +20,14 @@
             padding: 10px;
             width: 80%;
         }
-        .banner {
+     /*   .banner {
     width: 100%;
-    height: 300px; /* Adjust as needed */
-    background: url('hackathonHeader.png') center/cover no-repeat;
+    height: 100%; /* Adjust as needed 
+    background: url('images/header.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    }
+    } */
 
 
         button, .button {
@@ -66,7 +70,7 @@
 </head>
 <body>
     <div class="banner">
-        <img src="hackathonHeader.png" alt="AI Somali Translator Banner">
+        <img src="{{ url_for('static', filename='images/hackathonBanner.png') }}" alt="AI Somali Translator Banner">
     </div>
     <h1>English to Somali</h1>
     
