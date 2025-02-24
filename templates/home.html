@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to the Translator</title>
@@ -11,31 +14,9 @@
             background-color: whitesmoke;
             margin: 50px;
         }
-        .home-button {
-            position: absolute;
-            top: 20px;  /* Adjust distance from top */
-            left: 20px; /* Adjust distance from left */
-            padding: 8px 12px;
-            font-size: 14px;
-            text-align: center;
-            text-decoration: none;
-            color: #fff;
-            background-color: #92D7FF;
-            border-radius: 8px;
-            box-shadow: 0 4px #999;
-            transition: all 0.2s ease-in-out;
+        h1, p{
+            font-family: 'Roboto Mono', Arial, sans-serif;
         }
-
-        .home-button:hover {
-            background-color: black;
-        }
-
-        .home-button:active {
-            background-color: black;
-            box-shadow: 0 2px #666;
-            transform: translateY(2px);
-        }
-
 
         .banner {
             width: 100%;
@@ -52,6 +33,7 @@
 
         
         button, .button {
+            font-family: 'Roboto Mono', Arial, sans-serif;
             display: inline-block;
             padding: 15px 25px;
             font-size: 24px;
@@ -70,17 +52,29 @@
         button:hover {
             background-color: #459aa0;
         }
+        footer {
+            text-align: left;
+            padding: 100px;
+            background-color: #f5f5f5;
+            color: #737373;
+        }
     </style>
 </head>
 <body>
-    <div class="home-button">
-    <a href="home.html" class="home-button">Home</a>
-    </div>
     <div class="banner">
         <img src="{{ url_for('static', filename='images/hackathonImage.png') }}" alt="AI Somali Translator Banner">
     </div>
-    <h1>English to Somali Translator Tool</h1>
+    <h1>English to Somali Translator</h1>
+    <p>Qalabka Turjumidda Luuqada Ingiriisiga</p>
     <p>Click the button below to start translating!</p>
     <a href="/translate"><button>Get Started</button></a>
 </body>
+<footer>
+    <p>&copy; 2025 Halwo AI. All rights reserved.</p>
+    <p>Follow us: 
+        <a href="#">GitHub</a> | 
+        <a href="#">Twitter</a> | 
+        <a href="#">LinkedIn</a>
+    </p>
+</footer>
 </html>
